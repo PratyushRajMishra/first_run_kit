@@ -1,3 +1,8 @@
+## 1.0.2
+
+- Updated README demo media link to absolute GitHub raw URL for reliable rendering on pub.dev.
+- Kept onboarding, permission flow, and first-run APIs unchanged (documentation-focused release).
+
 ## 1.0.1
 
 - Improved onboarding progress header UI for a cleaner modern look.

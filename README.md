@@ -86,11 +86,11 @@ FirstRunWrapper(
 
 Demo GIF (recommended mobile aspect ratio):
 
-![first_run_kit Demo](assets/readme/first_run_kit_demo.gif)
+![first_run_kit Demo](https://raw.githubusercontent.com/PratyushRajMishra/first_run_kit/main/assets/readme/first_run_kit_demo.gif)
 
 You can replace this with your own capture at:
 
-- `assets/readme/first_run_kit_demo.gif`
+- `assets/readme/first_run_kit_demo.gif` (source file)
 
 ## Best Practices
 
