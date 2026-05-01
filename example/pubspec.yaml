@@ -1,0 +1,21 @@
+name: first_run_kit_example
+description: Example app for first_run_kit
+publish_to: 'none'
+
+environment:
+  sdk: ^3.11.4
+  flutter: '>=3.24.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  first_run_kit:
+    path: ..
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

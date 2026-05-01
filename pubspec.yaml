@@ -1,0 +1,23 @@
+name: first_run_kit
+description: A production-ready Flutter package for first launch onboarding, permission flows, and safe first-run detection.
+version: 1.0.0
+homepage: https://github.com/your-org/first_run_kit
+repository: https://github.com/your-org/first_run_kit
+issue_tracker: https://github.com/your-org/first_run_kit/issues
+
+environment:
+  sdk: ^3.11.4
+  flutter: '>=3.24.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.3.3
+  permission_handler: ^11.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
