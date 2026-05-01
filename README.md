@@ -19,7 +19,7 @@ Add dependency:
 
 ```yaml
 dependencies:
-  first_run_kit: ^1.0.0
+  first_run_kit: ^1.0.1
 ```
 
 Then run:
@@ -84,17 +84,13 @@ FirstRunWrapper(
 
 ## Screenshots
 
-Place mobile-aspect-ratio media (recommended: **1080x1920** or **1170x2532**):
+Demo GIF (recommended mobile aspect ratio):
 
-- `assets/readme/onboarding_flow.gif`
-- `assets/readme/permission_step.gif`
-- `assets/readme/custom_step.gif`
+![first_run_kit Demo](assets/readme/first_run_kit_demo.gif)
 
-```md
-![Onboarding Flow](assets/readme/onboarding_flow.gif)
-![Permission Step](assets/readme/permission_step.gif)
-![Custom Step](assets/readme/custom_step.gif)
-```
+You can replace this with your own capture at:
+
+- `assets/readme/first_run_kit_demo.gif`
 
 ## Best Practices
 

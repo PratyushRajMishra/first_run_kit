@@ -1,3 +1,9 @@
+## 1.0.1
+
+- Improved onboarding progress header UI for a cleaner modern look.
+- Added ready-to-use demo GIF in `assets/readme/first_run_kit_demo.gif`.
+- Updated README with embedded demo preview and usage guidance.
+
 ## 1.0.0
 
 - Initial stable release of `first_run_kit`.
