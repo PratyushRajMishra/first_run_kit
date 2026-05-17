@@ -1,4 +1,4 @@
-## 1.0.3
+## 1.1.0
 
 - Bumped package version for latest release.
 - Updated README to present the demo as an auto-playing demo video (GIF) compatible with both GitHub and pub.dev.
