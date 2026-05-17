@@ -1,3 +1,8 @@
+## 1.1.2
+
+- Made README more professional and concise for package users.
+- Switched demo embed to package-local `assets/readme/first_run_kit_demo_v2.gif` for consistent rendering on pub.dev and GitHub.
+
 ## 1.1.1
 
 - Replaced README demo media with the latest recording converted from `first_run.webm`.

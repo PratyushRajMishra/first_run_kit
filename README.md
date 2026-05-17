@@ -1,37 +1,32 @@
-# first_run_kit - Complete First Launch Experience for Flutter
+# first_run_kit
 
-`first_run_kit` is a production-ready package for building a polished first launch experience in Flutter apps.
+A production-ready Flutter package for building a polished first-launch experience with onboarding, permission flows, and safe first-run detection.
 
-It helps you implement **flutter onboarding**, **first launch** detection, a customizable **onboarding flow**, and permission requests with **permission handler flutter** support, including modern **intro screens flutter** patterns.
+## Demo Video
 
-## Features
+![first_run_kit Demo](assets/readme/first_run_kit_demo_v2.gif)
 
-- First launch detection using `SharedPreferences`
-- Multi-step onboarding flow (onboarding, permission, custom steps)
-- Built-in permission handling via `permission_handler`
-- Custom step support for any widget
-- Fully customizable UI and transitions
-- Professional default card-based UI
-- Easy color theming for background, cards, progress, and feedback states
-- Structured flow analytics via `onFlowEvent` (started, next, back, skipped, completed)
-- Safe storage utilities with `safeClear()` preserving `first_run`
+## Why first_run_kit
+
+- Detects first launch reliably using `SharedPreferences`
+- Supports multi-step flows with onboarding, permission, and custom steps
+- Handles permissions through `permission_handler`
+- Provides modern default UI with easy theming
+- Exposes flow analytics through `onFlowEvent`
+- Includes safe storage reset utilities
 
 ## Installation
 
-Add dependency:
-
 ```yaml
 dependencies:
-  first_run_kit: ^1.1.1
+  first_run_kit: ^1.1.2
 ```
-
-Then run:
 
 ```bash
 flutter pub get
 ```
 
-## Usage
+## Quick Start
 
 ```dart
 FirstRunWrapper(
@@ -47,7 +42,7 @@ FirstRunWrapper(
 )
 ```
 
-## Advanced Usage
+## Advanced Example
 
 ```dart
 FirstRunWrapper(
@@ -95,33 +90,23 @@ FirstRunWrapper(
 )
 ```
 
-## Demo Video
-
-This demo animation auto-plays on both GitHub README and pub.dev:
-
-![first_run_kit Demo Video](https://raw.githubusercontent.com/PratyushRajMishra/first_run_kit/main/assets/readme/first_run_kit_demo.gif)
-
-You can replace this demo file with your own capture at:
-
-- `assets/readme/first_run_kit_demo.gif` (source file)
-
 ## Best Practices
 
 - Keep onboarding concise (2 to 4 focused steps)
 - Explain permission value before requesting permission
-- Use `CustomStep` for business-specific setup content
+- Use `CustomStep` for app-specific setup content
 - Track completion events for analytics
-- Use `FirstRunManager().resetFirstRun()` only for debug tools or QA
+- Use `FirstRunManager().resetFirstRun()` only for debug or QA
 
-## Warning
+## Important Note
 
 Do not manually clear or overwrite the `first_run` key unless you intentionally want to show onboarding again.
 
-If you need to clear app preferences, use `StorageService.safeClear()` so `first_run` is preserved and first-run behavior remains predictable.
+If you need to clear app preferences, use `StorageService.safeClear()` so `first_run` is preserved.
 
 ## Example App
 
-A runnable demo is included in [`example/`](example), showing onboarding + permission + custom step flow.
+A runnable demo is included in `example/`, showing onboarding + permission + custom step flow.
 
 ## License
 
