@@ -11,6 +11,9 @@ It helps you implement **flutter onboarding**, **first launch** detection, a cus
 - Built-in permission handling via `permission_handler`
 - Custom step support for any widget
 - Fully customizable UI and transitions
+- Professional default card-based UI
+- Easy color theming for background, cards, progress, and feedback states
+- Structured flow analytics via `onFlowEvent` (started, next, back, skipped, completed)
 - Safe storage utilities with `safeClear()` preserving `first_run`
 
 ## Installation
@@ -19,7 +22,7 @@ Add dependency:
 
 ```yaml
 dependencies:
-  first_run_kit: ^1.0.1
+  first_run_kit: ^1.0.3
 ```
 
 Then run:
@@ -56,8 +59,15 @@ FirstRunWrapper(
     PermissionStep.microphone(),
   ],
   config: FirstRunConfig(
-    primaryColor: Colors.teal,
-    backgroundColor: Colors.white,
+    primaryColor: const Color(0xFF0F7BFF),
+    backgroundColor: const Color(0xFFF3F8FF),
+    surfaceColor: Colors.white,
+    progressColor: const Color(0xFF0F7BFF),
+    progressBackgroundColor: const Color(0xFFD7E8FF),
+    successColor: const Color(0xFF00A86B),
+    warningColor: const Color(0xFFF39C12),
+    errorColor: const Color(0xFFE53935),
+    cardBorderRadius: 24,
     layout: FirstRunLayout.centered,
     transitionBuilder: (child, animation) {
       return SlideTransition(
@@ -78,17 +88,20 @@ FirstRunWrapper(
   onPermissionResult: (status) {
     // optional analytics or logging
   },
+  onFlowEvent: (event) {
+    // send to analytics: event.type.name, event.stepIndex, event.totalSteps
+  },
   onFinish: (_) => const HomeScreen(),
 )
 ```
 
-## Screenshots
+## Demo Video
 
-Demo GIF (recommended mobile aspect ratio):
+This demo animation auto-plays on both GitHub README and pub.dev:
 
-![first_run_kit Demo](https://raw.githubusercontent.com/PratyushRajMishra/first_run_kit/main/assets/readme/first_run_kit_demo.gif)
+![first_run_kit Demo Video](https://raw.githubusercontent.com/PratyushRajMishra/first_run_kit/main/assets/readme/first_run_kit_demo.gif)
 
-You can replace this with your own capture at:
+You can replace this demo file with your own capture at:
 
 - `assets/readme/first_run_kit_demo.gif` (source file)
 

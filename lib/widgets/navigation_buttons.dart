@@ -10,6 +10,9 @@ class NavigationButtons extends StatelessWidget {
     super.key,
     required this.controller,
     required this.onComplete,
+    required this.onBack,
+    required this.onSkip,
+    required this.onNext,
   });
 
   /// Navigation controller for step changes.
@@ -18,6 +21,15 @@ class NavigationButtons extends StatelessWidget {
   /// Called when the flow should end.
   final VoidCallback onComplete;
 
+  /// Called when back is tapped.
+  final VoidCallback onBack;
+
+  /// Called when skip is tapped.
+  final VoidCallback onSkip;
+
+  /// Called when next is tapped.
+  final VoidCallback onNext;
+
   @override
   Widget build(BuildContext context) {
     final config = FirstRunThemeScope.of(context);
@@ -25,14 +37,14 @@ class NavigationButtons extends StatelessWidget {
     return Row(
       children: [
         if (!controller.isFirstStep)
-          config.buildBackButton(context, 'Back', controller.back),
+          config.buildBackButton(context, 'Back', onBack),
         if (!controller.isFirstStep) const SizedBox(width: 8),
-        config.buildSkipButton(context, 'Skip', onComplete),
+        config.buildSkipButton(context, 'Skip', onSkip),
         const Spacer(),
         config.buildNextButton(
           context,
           controller.isLastStep ? 'Finish' : 'Next',
-          controller.isLastStep ? onComplete : controller.next,
+          onNext,
         ),
       ],
     );

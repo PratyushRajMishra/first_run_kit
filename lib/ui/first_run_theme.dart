@@ -15,6 +15,14 @@ class FirstRunConfig {
   const FirstRunConfig({
     this.primaryColor,
     this.backgroundColor,
+    this.surfaceColor,
+    this.onSurfaceColor,
+    this.progressColor,
+    this.progressBackgroundColor,
+    this.successColor,
+    this.warningColor,
+    this.errorColor,
+    this.cardBorderRadius = 20,
     this.titleStyle,
     this.descriptionStyle,
     this.buttonBuilder,
@@ -31,6 +39,30 @@ class FirstRunConfig {
 
   /// Flow background color.
   final Color? backgroundColor;
+
+  /// Card/surface color used by default step containers.
+  final Color? surfaceColor;
+
+  /// Foreground color on top of [surfaceColor].
+  final Color? onSurfaceColor;
+
+  /// Active color for progress bars and chips.
+  final Color? progressColor;
+
+  /// Background color for progress bars.
+  final Color? progressBackgroundColor;
+
+  /// Semantic success color (for granted permission states).
+  final Color? successColor;
+
+  /// Semantic warning color.
+  final Color? warningColor;
+
+  /// Semantic error color.
+  final Color? errorColor;
+
+  /// Border radius used by default professional cards.
+  final double cardBorderRadius;
 
   /// Optional text style for step titles.
   final TextStyle? titleStyle;
@@ -70,7 +102,14 @@ class FirstRunConfig {
 
     final color = primaryColor ?? Theme.of(context).colorScheme.primary;
     return FilledButton(
-      style: FilledButton.styleFrom(backgroundColor: color),
+      style: FilledButton.styleFrom(
+        backgroundColor: color,
+        foregroundColor: Colors.white,
+        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(cardBorderRadius * 0.6),
+        ),
+      ),
       onPressed: onPressed,
       child: Text(label),
     );
@@ -84,7 +123,13 @@ class FirstRunConfig {
   ) {
     final builder = backButtonBuilder ?? buttonBuilder;
     if (builder != null) return builder(context, label, onPressed);
-    return TextButton(onPressed: onPressed, child: Text(label));
+    return TextButton(
+      style: TextButton.styleFrom(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+      ),
+      onPressed: onPressed,
+      child: Text(label),
+    );
   }
 
   /// Builds the skip button using custom or default styling.
@@ -95,7 +140,13 @@ class FirstRunConfig {
   ) {
     final builder = skipButtonBuilder ?? buttonBuilder;
     if (builder != null) return builder(context, label, onPressed);
-    return TextButton(onPressed: onPressed, child: Text(label));
+    return TextButton(
+      style: TextButton.styleFrom(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+      ),
+      onPressed: onPressed,
+      child: Text(label),
+    );
   }
 }
 

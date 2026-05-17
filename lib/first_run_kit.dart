@@ -2,6 +2,7 @@ export 'controller/flow_controller.dart';
 export 'core/first_run_manager.dart';
 export 'core/storage_service.dart';
 export 'models/custom_step.dart';
+export 'models/flow_event.dart';
 export 'models/first_run_step.dart';
 export 'models/onboarding_step.dart';
 export 'models/permission_step.dart';
