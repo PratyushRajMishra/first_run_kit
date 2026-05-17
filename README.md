@@ -22,7 +22,7 @@ Add dependency:
 
 ```yaml
 dependencies:
-  first_run_kit: ^1.1.0
+  first_run_kit: ^1.1.1
 ```
 
 Then run:

@@ -1,3 +1,8 @@
+## 1.1.1
+
+- Replaced README demo media with the latest recording converted from `first_run.webm`.
+- Keeps demo playback compatible with both GitHub README and pub.dev via GIF embed.
+
 ## 1.1.0
 
 - Bumped package version for latest release.
