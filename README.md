@@ -4,7 +4,7 @@ A production-ready Flutter package for building a polished first-launch experien
 
 ## Demo Video
 
-![first_run_kit Demo](assets/readme/first_run_kit_demo_v2.gif)
+![first_run_kit Demo](https://raw.githubusercontent.com/PratyushRajMishra/first_run_kit/main/assets/readme/first_run_kit_demo_v3.gif)
 
 ## Why first_run_kit
 
@@ -19,7 +19,7 @@ A production-ready Flutter package for building a polished first-launch experien
 
 ```yaml
 dependencies:
-  first_run_kit: ^1.1.2
+  first_run_kit: ^1.1.3
 ```
 
 ```bash

@@ -1,3 +1,8 @@
+## 1.1.3
+
+- Fixed pub.dev demo rendering by switching README demo image to an absolute GitHub raw URL.
+- Added a fresh demo asset filename (`first_run_kit_demo_v3.gif`) to avoid stale cache.
+
 ## 1.1.2
 
 - Made README more professional and concise for package users.
